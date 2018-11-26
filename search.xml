@@ -27,6 +27,18 @@
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> abc </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> centOS </tag>
+            
+        </tags>
       
     </entry>
     
