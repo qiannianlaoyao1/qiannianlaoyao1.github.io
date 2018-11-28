@@ -3,6 +3,17 @@
   
     
     <entry>
+      <title>test</title>
+      <link href="/2018/11/28/test/"/>
+      <url>/2018/11/28/test/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/2018/11/28/test/1.jpg" alt=""></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    <entry>
       <title>HDU 3308 (线段树合并 求最大连续上升序列)</title>
       <link href="/2018/11/27/HDU-3308-%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%90%88%E5%B9%B6-%E6%B1%82%E6%9C%80%E5%A4%A7%E8%BF%9E%E7%BB%AD%E5%AD%90%E4%B8%B2/"/>
       <url>/2018/11/27/HDU-3308-%E7%BA%BF%E6%AE%B5%E6%A0%91%E5%90%88%E5%B9%B6-%E6%B1%82%E6%9C%80%E5%A4%A7%E8%BF%9E%E7%BB%AD%E5%AD%90%E4%B8%B2/</url>
