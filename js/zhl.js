@@ -27,8 +27,19 @@ menu_dpf.addEventListener("click", function () {
         transform: "translateX(0)",
         opacity: 1
     });
+    setStyle(menu_dpf,{
+        display:"none"
+    });
 }, false);
-
+close_dpf.addEventListener("click",function () {
+    setStyle(content_left, {
+        transform: "translateX(-500px)",
+        opacity: 0
+    });
+    setStyle(menu_dpf,{
+        display:"block"
+    });
+},false);
 function addClass(elements, cName) {
     if (!hasClass(elements, cName)) {
         elements.className += ' ' + cName;
