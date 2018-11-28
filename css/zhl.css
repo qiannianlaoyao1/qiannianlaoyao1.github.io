@@ -117,7 +117,7 @@
 #header-left {
   display: inline-block;
   margin-left: 2em;
-  width: 49%;
+  width: 45%;
   vertical-align: center;
 }
 #header-title a {
@@ -131,7 +131,7 @@
 #header-right {
   display: inline-block;
   margin-right: 2em;
-  width: 49%;
+  width: 45%;
   text-align: right;
   vertical-align: center;
 }
@@ -331,6 +331,7 @@ figure {
   border-right: 1px solid #ddd;
   transition: all 0.5s;
   transform: translateX(0);
+  opacity: 1;
 }
 #content-right {
   width: 80%;
@@ -358,6 +359,7 @@ figure {
   }
   #content-left {
     transform: translateX(-500px);
+    opacity: 0;
   }
   #header-left {
     width: 100%;

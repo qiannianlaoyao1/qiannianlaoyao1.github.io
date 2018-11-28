@@ -1,27 +1,40 @@
-function bind(func,that) {
+function bind(func, that) {
     var args = [].slice(arguments);
     args.shift();
     args.shift();
     return function () {
-        return func.apply(that,args);
+        return func.apply(that, args);
     }
 }
-var getId = bind(document.getElementById,document);
+
+var getId = bind(document.getElementById, document);
 var $header = getId("header");
 var $top = getId("top");
 var menu_dpf = getId("menu_dpf");
 var close_dpf = getId("close_dpf");
 var clientHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 var clientWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+var content_left = getId("content-left");
 
 function hasClass(elements, cName) {
     return !!elements.className.match(new RegExp("(\\s|^)" + cName + "(\\s|$)"));
     // ( \\s|^ ) 判断前面是否有空格 （\\s | $ ）判断后面是否有空格 两个感叹号为转换为布尔值 以方便做判断  
 }
 
-window.onresize = function () {
+function setStyle(element, css) {
+    css = css || {};
+    for (var key in css) {
+        if (css.hasOwnProperty(key))
+            element.style[key] = css[key];
+    }
+}
 
-};
+menu_dpf.addEventListener("click", function () {
+    setStyle(content_left, {
+        transform: "translateX(0)",
+        opacity: 1
+    });
+}, false);
 
 function addClass(elements, cName) {
     if (!hasClass(elements, cName)) {
@@ -50,6 +63,7 @@ function gotoTop() {
         }, 30);
     }
 }
+
 window.onload = function () {
     gotoTop();
 };

@@ -1,7 +1,7 @@
 #header-left {
   display: inline-block;
   margin-left: 2em;
-  width: 49%;
+  width: 45%;
   vertical-align: center;
 }
 #header-title a {
@@ -15,7 +15,7 @@
 #header-right {
   display: inline-block;
   margin-right: 2em;
-  width: 49%;
+  width: 45%;
   text-align: right;
   vertical-align: center;
 }
