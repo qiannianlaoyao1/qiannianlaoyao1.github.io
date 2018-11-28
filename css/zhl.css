@@ -117,7 +117,8 @@
 #header-left {
   display: inline-block;
   margin-left: 2em;
-  width: 50%;
+  width: 49%;
+  vertical-align: center;
 }
 #header-title a {
   color: #999;
@@ -130,8 +131,9 @@
 #header-right {
   display: inline-block;
   margin-right: 2em;
-  width: 50%;
+  width: 49%;
   text-align: right;
+  vertical-align: center;
 }
 #header-right a {
   font-size: 1.1rem;
