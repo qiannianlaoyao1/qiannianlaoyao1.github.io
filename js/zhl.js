@@ -1,14 +1,5 @@
-function bind(func, that) {
-    var args = [].slice(arguments);
-    args.shift();
-    args.shift();
-    return function () {
-        var args1 = [].slice(arguments);
-        return func.apply(that, args.concat(args1));
-    }
-}
 
-var getId = bind(document.getElementById, document);
+var getId = document.getElementById.bind(document);
 var $header = getId("header");
 var $top = getId("top");
 var menu_dpf = getId("menu_dpf");
