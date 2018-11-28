@@ -115,7 +115,7 @@
   color: #444;
 }
 #header-left {
-  display: block;
+  display: inline-block;
   margin-left: 2em;
   width: 50%;
 }
@@ -128,7 +128,7 @@
   color: #444;
 }
 #header-right {
-  display: inline;
+  display: inline-block;
   margin-right: 2em;
   width: 50%;
   text-align: right;
@@ -338,7 +338,7 @@ figure {
   height: 40px;
   position: fixed;
   z-index: 1000;
-  top: 100px;
+  top: 130px;
   left: 10px;
   display: none;
 }
