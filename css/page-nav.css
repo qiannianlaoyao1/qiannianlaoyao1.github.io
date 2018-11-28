@@ -4,6 +4,16 @@
   -ms-flex-pack: center;
       justify-content: center;
   margin-top: 0.5em;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#page-nav a {
+  text-decoration: none;
+  color: $color-a;
+}
+#page-nav a:hover {
+  color: $color-a-hover;
+  background-color: #fff;
 }
 #page-nav .page-number,
 #page-nav .extend {
@@ -16,12 +26,4 @@
 }
 #page-nav .current {
   background-color: $color-background;
-}
-#page-nav a {
-  text-decoration: none;
-  color: $color-a;
-}
-#page-nav a:hover {
-  color: $color-a-hover;
-  background-color: #fff;
 }

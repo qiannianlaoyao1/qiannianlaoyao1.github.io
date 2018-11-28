@@ -1,7 +1,6 @@
 #header-left {
   margin-left: 2em;
-  -ms-flex-order: 1;
-      order: 1;
+  width: 300px;
 }
 #header-title a {
   color: $color-a;
@@ -12,9 +11,8 @@
   color: $color-a-hover;
 }
 #header-right {
-  -ms-flex-order: 2;
-      order: 2;
   margin-right: 2em;
+  width: 400px;
 }
 #header-right a {
   font-size: 1.1rem;
