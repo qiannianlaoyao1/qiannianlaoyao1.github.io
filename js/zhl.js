@@ -8,6 +8,7 @@ var clientHeight = window.innerHeight || document.documentElement.clientHeight |
 var clientWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 var content_left = getId("content-left");
 
+console.log("adadad");
 function hasClass(elements, cName) {
     return !!elements.className.match(new RegExp("(\\s|^)" + cName + "(\\s|$)"));
     // ( \\s|^ ) 判断前面是否有空格 （\\s | $ ）判断后面是否有空格 两个感叹号为转换为布尔值 以方便做判断  
