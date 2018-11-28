@@ -1,5 +1,5 @@
 #header-left {
-  display: inline-block;
+  display: block;
   margin-left: 2em;
   width: 50%;
 }
@@ -12,7 +12,7 @@
   color: $color-a-hover;
 }
 #header-right {
-  display: inline-block;
+  display: inline;
   margin-right: 2em;
   width: 50%;
   text-align: right;
