@@ -3,7 +3,8 @@ function bind(func, that) {
     args.shift();
     args.shift();
     return function () {
-        return func.apply(that, args);
+        var args1 = [].slice(arguments);
+        return func.apply(that, args.concat(args1));
     }
 }
 
