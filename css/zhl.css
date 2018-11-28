@@ -115,8 +115,9 @@
   color: #444;
 }
 #header-left {
+  display: inline-block;
   margin-left: 2em;
-  width: 300px;
+  width: 50%;
 }
 #header-title a {
   color: #999;
@@ -127,8 +128,10 @@
   color: #444;
 }
 #header-right {
+  display: inline-block;
   margin-right: 2em;
-  width: 400px;
+  width: 50%;
+  text-align: right;
 }
 #header-right a {
   font-size: 1.1rem;
@@ -248,13 +251,8 @@ figure {
   font-size: 1rem;
 }
 #page-nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  display: block;
   margin-top: 0.5em;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 #page-nav a {
   text-decoration: none;
@@ -331,6 +329,8 @@ figure {
   margin-left: 2em;
   margin-top: 2em;
   border-right: 1px solid #ddd;
+  transition: all 0.5s;
+  transform: translateX(0);
 }
 #content-right {
   width: 80%;
@@ -358,5 +358,11 @@ figure {
   }
   #content-left {
     transform: translateX(-500px);
+  }
+  #header-left {
+    width: 100%;
+  }
+  #header-right {
+    width: 100%;
   }
 }

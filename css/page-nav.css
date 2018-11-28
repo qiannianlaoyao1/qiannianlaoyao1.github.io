@@ -1,11 +1,6 @@
 #page-nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  display: block;
   margin-top: 0.5em;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 #page-nav a {
   text-decoration: none;
