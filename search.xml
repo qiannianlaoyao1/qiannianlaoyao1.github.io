@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[test2]]></title>
+    <url>%2F2018%2F11%2F29%2Ftest2%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[test]]></title>
     <url>%2F2018%2F11%2F29%2Ftest%2F</url>
     <content type="text"></content>
