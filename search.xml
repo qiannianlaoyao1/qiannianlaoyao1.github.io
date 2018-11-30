@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[一道特别有想法的题]]></title>
+    <url>%2F2018%2F11%2F30%2F%E4%B8%80%E9%81%93%E7%89%B9%E5%88%AB%E6%9C%89%E6%83%B3%E6%B3%95%E7%9A%84%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[题意 初级：给定一段序列，序列的长度范围是1e5的，每个数的范围是正负1e9的，然后给出一个数值x，要你求这个序列里面一段连续的和且和的值为x，并且序列的长度越大越好 进阶：对于这个序列给出的数a[i]，只有0和1构成，求的是一段连续的区间里面的0和1的个数是相同的，并且长度越大越好 最终：对于这个序列给出的数可以是正负1e9的，然后求得还是一段连续的区间里面的0和1的个数是相同的，并且长度越大越好 题解 初级： 对于这个序列我们可以想到要找两个位置，i和j，i到j里面的和是x对吧，当然我们不能暴力的枚举两个位置，这样一定超时，我们可以发现可以用一个前缀和来优化求和的过程对吧，对于i到j的和不就是 sum[j]-sum[i]，sum代表前缀和，然而我们可以发现，我们需要的只是sum[i]的位置，这个位置我们也可以预处理一下，用一个map来表示前缀和这个数第一次出现的位置，这里为什么是第一次呢后面会再说。 ​ 然后对于这个序列我们先从前往后遍历不断累加一个和 sums 然后如果满足条件的话，一定有一个位置i从i到现在的sums 的位置也就是j 满足 sum[j]-sum[i] = x ，然而我们已经用map记录过 所以直接判断是不是出现过即可，出现过的话在更新一下最大长度即可 ​ 举个例子为什么是map只记录第一次的位置 比如 序列是 2 3 -3 这个时候前缀和是2 5 2 为什么只记录第一次呢，因为我们是从前往后遍历序列对吧，只记录第一次的位置这样保证长度一定是最长的！ 进阶：其实我们可以根据上面的题来想想，如果我们把所有的0都换成-1，那么问题不就变成了给定序列找一段连续的和为0，并且长度最大吗？，问题解决了 最终：其实这个思路和上面的也是一样的，我们对于别的数字我们不看，对于我们有影响的只是0和1对吧，我们就在这里面看就可以，然后还是把0改成-1，然后就可以了 代码12345678910111213141516171819202122232425262728293031323334353637383940414243#include&lt;bits/stdc++.h&gt;#define N 100005#define LL long longusing namespace std;int a[N];map&lt;long long,int&gt;m;int main()&#123; int n; LL x; while(scanf("%d%lld",&amp;n,&amp;x)==2) &#123; m.clear(); for(int i=1;i&lt;=n;i++) &#123; scanf("%d",&amp;a[i]); &#125; m[0] = -1; LL sum = 0; for(int i=1;i&lt;=n;i++) &#123; sum+=a[i]; if(m[sum]!=0) continue; else m[sum] = i; &#125; sum = 0; int len = -1; for(int i=1;i&lt;=n;i++) &#123; sum+=a[i]; if(m[sum-x]!=0) &#123; if(m[sum-x]==-1) &#123; len = max(len,i); &#125; else len = max(len,i-m[sum-x]); &#125; &#125; printf("%d\n",len); &#125;&#125; 接下来的代码和上面的都差不多 就是无非把序列的数改一改，就不在赘述]]></content>
+      <categories>
+        <category>ACM</category>
+      </categories>
+      <tags>
+        <tag>思维</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2018%2F11%2F28%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
