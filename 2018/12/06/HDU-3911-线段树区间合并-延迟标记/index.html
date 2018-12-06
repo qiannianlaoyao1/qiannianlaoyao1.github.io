@@ -85,20 +85,17 @@
 
 
 
-<meta name="description" content="题目链接  题意​    给定区间01，然后可以把区间0变1，1变0，然后求最大连续1的长度 题解正常的维护01区间，用lazy 来表示反转，多维护一个最大0的左连续，右连续，连续最大  然后反转的时候，直接swap 一下就可以 但是有一个坑点，就是查找区间最大连续1的时候，如果是包含你要的区间 那就直接返回这个区间最大的值，如果是这个区间完全左边和右边的时候也直接递归就可以   但是当在这个区">
 <meta name="keywords" content="-线段树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HDU 3911 线段树区间合并 延迟标记">
 <meta property="og:url" content="http://www.qnlywhd.top/2018/12/06/HDU-3911-线段树区间合并-延迟标记/index.html">
 <meta property="og:site_name" content="qiannianlaoyao&#39;s Blog">
-<meta property="og:description" content="题目链接  题意​    给定区间01，然后可以把区间0变1，1变0，然后求最大连续1的长度 题解正常的维护01区间，用lazy 来表示反转，多维护一个最大0的左连续，右连续，连续最大  然后反转的时候，直接swap 一下就可以 但是有一个坑点，就是查找区间最大连续1的时候，如果是包含你要的区间 那就直接返回这个区间最大的值，如果是这个区间完全左边和右边的时候也直接递归就可以   但是当在这个区">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.qnlywhd.top/2018/12/06/HDU-3911-线段树区间合并-延迟标记/2018-12-06%2018-36-02屏幕截图.png">
 <meta property="og:image" content="http://www.qnlywhd.top/2018/12/06/HDU-3911-线段树区间合并-延迟标记/2.png">
-<meta property="og:updated_time" content="2018-12-06T10:45:52.149Z">
+<meta property="og:updated_time" content="2018-12-06T10:50:53.427Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HDU 3911 线段树区间合并 延迟标记">
-<meta name="twitter:description" content="题目链接  题意​    给定区间01，然后可以把区间0变1，1变0，然后求最大连续1的长度 题解正常的维护01区间，用lazy 来表示反转，多维护一个最大0的左连续，右连续，连续最大  然后反转的时候，直接swap 一下就可以 但是有一个坑点，就是查找区间最大连续1的时候，如果是包含你要的区间 那就直接返回这个区间最大的值，如果是这个区间完全左边和右边的时候也直接递归就可以   但是当在这个区">
 <meta name="twitter:image" content="http://www.qnlywhd.top/2018/12/06/HDU-3911-线段树区间合并-延迟标记/2018-12-06%2018-36-02屏幕截图.png">
 
 
@@ -359,7 +356,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-12-06T18:45:52+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-12-06T18:50:53+08:00">
                 2018-12-06
               </time>
             
@@ -452,6 +449,7 @@
 
       
         <p><img src="/2018/12/06/HDU-3911-线段树区间合并-延迟标记/2018-12-06 18-36-02屏幕截图.png" alt=""></p>
+<a id="more"></a>
 <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=3911" target="_blank" rel="noopener">题目链接</a></p>
 <p><img src="/2018/12/06/HDU-3911-线段树区间合并-延迟标记/2.png" alt=""></p>
 <h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>​    给定区间01，然后可以把区间0变1，1变0，然后求最大连续1的长度</p>
