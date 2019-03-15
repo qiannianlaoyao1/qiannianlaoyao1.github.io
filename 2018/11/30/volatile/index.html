@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="-线段树,">
+  <meta name="keywords" content="-并发,">
 
 
 
@@ -85,19 +85,17 @@
 
 
 
-<meta name="keywords" content="-线段树">
+<meta name="keywords" content="-并发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HDU 4553 线段树区间合并">
-<meta property="og:url" content="http://www.qnlywhd.top/2018/11/30/HDU-4553-线段树区间合并/index.html">
+<meta property="og:title" content="volatile">
+<meta property="og:url" content="http://www.qnlywhd.top/2018/11/30/volatile/index.html">
 <meta property="og:site_name" content="qiannianlaoyao&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://www.qnlywhd.top/2018/11/30/HDU-4553-线段树区间合并/1.png">
-<meta property="og:image" content="http://www.qnlywhd.top/2018/11/30/HDU-4553-线段树区间合并/2.png">
-<meta property="og:image" content="http://www.qnlywhd.top/2018/11/30/HDU-4553-线段树区间合并/3.png">
-<meta property="og:updated_time" content="2018-12-06T10:37:43.510Z">
+<meta property="og:image" content="http://www.qnlywhd.top/2018/11/30/volatile/home/coder/hexo/source/_posts/volatile/1.jpg">
+<meta property="og:updated_time" content="2019-03-15T16:12:20.455Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDU 4553 线段树区间合并">
-<meta name="twitter:image" content="http://www.qnlywhd.top/2018/11/30/HDU-4553-线段树区间合并/1.png">
+<meta name="twitter:title" content="volatile">
+<meta name="twitter:image" content="http://www.qnlywhd.top/2018/11/30/volatile/home/coder/hexo/source/_posts/volatile/1.jpg">
 
 
 
@@ -127,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://www.qnlywhd.top/2018/11/30/HDU-4553-线段树区间合并/">
+  <link rel="canonical" href="http://www.qnlywhd.top/2018/11/30/volatile/">
 
 
 
 
 
-  <title>HDU 4553 线段树区间合并 | qiannianlaoyao's Blog</title>
+  <title>volatile | qiannianlaoyao's Blog</title>
   
 
 
@@ -312,7 +310,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://www.qnlywhd.top/2018/11/30/HDU-4553-线段树区间合并/">
+    <link itemprop="mainEntityOfPage" href="http://www.qnlywhd.top/2018/11/30/volatile/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="王浩东">
@@ -329,7 +327,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HDU 4553 线段树区间合并</h1>
+          <h1 class="post-title" itemprop="name headline">volatile</h1>
         
 
         <div class="post-meta">
@@ -357,8 +355,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-12-06T18:37:43+08:00">
-                2018-12-06
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-16T00:12:20+08:00">
+                2019-03-16
               </time>
             
           </span>
@@ -376,8 +374,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/ACM/" itemprop="url" rel="index">
-                    <span itemprop="name">ACM</span>
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
                   </a>
                 </span>
 
@@ -412,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1.3k
+                  899
                 </span>
               
 
@@ -428,7 +426,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  7
+                  3
                 </span>
               
             </div>
@@ -449,20 +447,45 @@
       
 
       
-        <p><img src="/2018/11/30/HDU-4553-线段树区间合并/1.png" alt=""></p>
+        <p><img src="/2018/11/30/volatile/home/coder/hexo/source/_posts/volatile/1.jpg" alt=""></p>
 <a id="more"></a>
-<p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=4553" target="_blank" rel="noopener">题目链接 </a></p>
-<p><img src="/2018/11/30/HDU-4553-线段树区间合并/2.png" alt=""></p>
-<p><img src="/2018/11/30/HDU-4553-线段树区间合并/3.png" alt=""></p>
-<h3 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h3><p>​    有女神和屌丝两种朋友，屌丝每次申请x时间，女神每次也申请x时间，每次都找最靠左的时间  </p>
-<p>然后女神优先级高于屌丝，可以覆盖屌丝的时间，但是，如果屌丝被覆盖的不完全，比如 1-5 是屌丝</p>
-<p>然后女神占了1-3，剩下的4-5 还是屌丝的。        </p>
-<hr>
-<h3 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h3><p>​    正常的线段树区间01维护，然后开两个树，一个维护屌丝的时间，一个维护女神的时间</p>
-<p>屌丝就正常在屌丝的树上，维护 更新 ，然后女神的话，现在屌丝树上看 有没有地方 有地方就</p>
-<p>更新屌丝树，然后如果没有地方的话 ，在女神树上找一段时间 找到了 在女神树和屌丝树都更新</p>
-<p>一下因为有可能女神占用屌丝的时间 ，比之前的屌丝时间还多，所以需要更新一下。     </p>
-<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> N 100010</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l,r;</span><br><span class="line">    <span class="keyword">int</span> ls,rs,sum;</span><br><span class="line">    <span class="keyword">int</span> lazy;</span><br><span class="line">&#125;;</span><br><span class="line">node shu[<span class="number">2</span>][N&lt;&lt;<span class="number">2</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pushup</span><span class="params">(<span class="keyword">int</span> rt,<span class="keyword">int</span> inx)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    shu[inx][rt].ls = shu[inx][rt&lt;&lt;<span class="number">1</span>].ls;</span><br><span class="line">    shu[inx][rt].rs = shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].rs;</span><br><span class="line">    <span class="keyword">if</span>(shu[inx][rt&lt;&lt;<span class="number">1</span>].ls==(shu[inx][rt&lt;&lt;<span class="number">1</span>].r - shu[inx][rt&lt;&lt;<span class="number">1</span>].l + <span class="number">1</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        shu[inx][rt].ls += shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].ls;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].rs==(shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].r - shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].l + <span class="number">1</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        shu[inx][rt].rs += shu[inx][rt&lt;&lt;<span class="number">1</span>].rs;</span><br><span class="line">    &#125;</span><br><span class="line">    shu[inx][rt].sum = max(max(shu[inx][rt&lt;&lt;<span class="number">1</span>].sum,shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].sum),shu[inx][rt&lt;&lt;<span class="number">1</span>].rs+shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].ls);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pushdown</span><span class="params">(<span class="keyword">int</span> rt,<span class="keyword">int</span> inx)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(shu[inx][rt].lazy == <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        shu[inx][rt&lt;&lt;<span class="number">1</span>].ls = shu[inx][rt&lt;&lt;<span class="number">1</span>].rs = shu[inx][rt&lt;&lt;<span class="number">1</span>].sum = (shu[inx][rt&lt;&lt;<span class="number">1</span>].r - shu[inx][rt&lt;&lt;<span class="number">1</span>].l + <span class="number">1</span>);</span><br><span class="line">        shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].ls = shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].rs = shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].sum = (shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].r - shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].l + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        shu[inx][rt&lt;&lt;<span class="number">1</span>].lazy = shu[inx][rt].lazy;</span><br><span class="line">        shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].lazy = shu[inx][rt].lazy;</span><br><span class="line">        shu[inx][rt].lazy = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(shu[inx][rt].lazy == <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        shu[inx][rt&lt;&lt;<span class="number">1</span>].ls = shu[inx][rt&lt;&lt;<span class="number">1</span>].rs = shu[inx][rt&lt;&lt;<span class="number">1</span>].sum = <span class="number">0</span>;</span><br><span class="line">        shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].ls = shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].rs = shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].sum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        shu[inx][rt&lt;&lt;<span class="number">1</span>].lazy = shu[inx][rt].lazy;</span><br><span class="line">        shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].lazy = shu[inx][rt].lazy;</span><br><span class="line">        shu[inx][rt].lazy = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> rt,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> inx)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    shu[inx][rt].l = l,shu[inx][rt].r = r;</span><br><span class="line">    shu[inx][rt].lazy = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(l==r)</span><br><span class="line">    &#123;</span><br><span class="line">        shu[inx][rt].ls = shu[inx][rt].rs = shu[inx][rt].sum = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid = (l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    build(rt&lt;&lt;<span class="number">1</span>,l,mid,inx);</span><br><span class="line">    build(rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,mid+<span class="number">1</span>,r,inx);</span><br><span class="line">    pushup(rt,inx);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> rt,<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> val,<span class="keyword">int</span> inx)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> L = shu[inx][rt].l , R = shu[inx][rt].r;</span><br><span class="line">    <span class="keyword">if</span>(l&lt;=L&amp;&amp;R&lt;=r)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(val)</span><br><span class="line">        &#123;</span><br><span class="line">            shu[inx][rt].ls = shu[inx][rt].rs = shu[inx][rt].sum = R-L+<span class="number">1</span>;</span><br><span class="line">            shu[inx][rt].lazy = <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            shu[inx][rt].ls = shu[inx][rt].rs = shu[inx][rt].sum = <span class="number">0</span>;</span><br><span class="line">            shu[inx][rt].lazy = <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        pushdown(rt,inx);</span><br><span class="line">        <span class="keyword">int</span> mid = (L+R)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(l&lt;=mid) update(rt&lt;&lt;<span class="number">1</span>,l,r,val,inx);</span><br><span class="line">        <span class="keyword">if</span>(mid&lt;r) update(rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,l,r,val,inx);</span><br><span class="line">        pushup(rt,inx);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> rt,<span class="keyword">int</span> val,<span class="keyword">int</span> inx)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(shu[inx][rt].ls == val) <span class="keyword">return</span> shu[inx][rt].l; <span class="comment">//当前区间最左边可以吗</span></span><br><span class="line">    <span class="keyword">if</span>(shu[inx][rt].sum&gt;=val) <span class="comment">//当前区间可以吗</span></span><br><span class="line">    &#123;</span><br><span class="line">        pushdown(rt,inx); <span class="comment">//下传</span></span><br><span class="line">        <span class="keyword">if</span>(shu[inx][rt&lt;&lt;<span class="number">1</span>].sum&gt;=val) <span class="keyword">return</span> Find(rt&lt;&lt;<span class="number">1</span>,val,inx); <span class="comment">//当前区间左儿子可以吗</span></span><br><span class="line">        <span class="keyword">if</span>(shu[inx][rt&lt;&lt;<span class="number">1</span>].rs+shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].ls &gt;=val) <span class="keyword">return</span> shu[inx][rt&lt;&lt;<span class="number">1</span>].r - shu[inx][rt&lt;&lt;<span class="number">1</span>].rs+<span class="number">1</span>; <span class="comment">// 当前区间分开的中间可以吗</span></span><br><span class="line">        <span class="keyword">if</span>(shu[inx][rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>].sum&gt;=val) <span class="keyword">return</span> Find(rt&lt;&lt;<span class="number">1</span>|<span class="number">1</span>,val,inx); <span class="comment">// 当前区间右儿子可以吗</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</span><br><span class="line">    <span class="keyword">int</span> kk = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> n,m;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</span><br><span class="line">        <span class="built_in">memset</span>(shu,<span class="number">0</span>,<span class="keyword">sizeof</span>(shu));</span><br><span class="line">        build(<span class="number">1</span>,<span class="number">1</span>,n,<span class="number">0</span>); <span class="comment">// 0代表ds树</span></span><br><span class="line">        build(<span class="number">1</span>,<span class="number">1</span>,n,<span class="number">1</span>); <span class="comment">// 1代表ns树</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Case %d:\n"</span>,kk++);</span><br><span class="line">        <span class="keyword">char</span> s1[<span class="number">10</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;m; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%s"</span>,s1);</span><br><span class="line">            <span class="keyword">if</span>(s1[<span class="number">0</span>]==<span class="string">'D'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> x;</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);</span><br><span class="line">                <span class="keyword">int</span> ans = Find(<span class="number">1</span>,x,<span class="number">0</span>);</span><br><span class="line">                <span class="keyword">if</span>(ans == <span class="number">0</span> ) <span class="built_in">printf</span>(<span class="string">"fly with yourself\n"</span>);</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    update(<span class="number">1</span>,ans,ans+x<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"%d,let's fly\n"</span>,ans);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s1[<span class="number">0</span>]==<span class="string">'N'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> x;</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;x);</span><br><span class="line">                <span class="keyword">int</span> ans = Find(<span class="number">1</span>,x,<span class="number">0</span>);</span><br><span class="line">                <span class="comment">//printf("DS: %d\n",ans);</span></span><br><span class="line">                <span class="keyword">if</span>(ans == <span class="number">0</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">int</span> res = Find(<span class="number">1</span>,x,<span class="number">1</span>);</span><br><span class="line">                    <span class="comment">//printf("NS: %d\n",res);</span></span><br><span class="line">                    <span class="keyword">if</span>(res == <span class="number">0</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">"wait for me\n"</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">else</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        update(<span class="number">1</span>,res,res+x<span class="number">-1</span>,<span class="number">0</span>,<span class="number">1</span>);</span><br><span class="line">                        update(<span class="number">1</span>,res,res+x<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">                        <span class="built_in">printf</span>(<span class="string">"%d,don't put my gezi\n"</span>,res);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                &#123;</span><br><span class="line">                    update(<span class="number">1</span>,ans,ans+x<span class="number">-1</span>,<span class="number">0</span>,<span class="number">0</span>);</span><br><span class="line">                    update(<span class="number">1</span>,ans,ans+x<span class="number">-1</span>,<span class="number">0</span>,<span class="number">1</span>);</span><br><span class="line">                    <span class="built_in">printf</span>(<span class="string">"%d,don't put my gezi\n"</span>,ans);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(s1[<span class="number">0</span>]==<span class="string">'S'</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> l,r;</span><br><span class="line">                <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;l,&amp;r);</span><br><span class="line">                update(<span class="number">1</span>,l,r,<span class="number">1</span>,<span class="number">0</span>);</span><br><span class="line">                update(<span class="number">1</span>,l,r,<span class="number">1</span>,<span class="number">1</span>);</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">"I am the hope of chinese chengxuyuan!!\n"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>volatile 修饰的共享变量，有两点特性</p>
+<p>​    保证了不同线程对该变量操作的内存可见性</p>
+<p>​    禁止指令重排序</p>
+<p>java 中 所有的变量都存在主存中，每个线程又有自己的工作内存，</p>
+<p>线程操作以工作内存为主，只能访问自己的工作内存，之后要把值同步到主内存中，</p>
+<p>在执行的时候线程回去主存中读数据，然后加载到工作内存中，然后执行完在把值创给主存，主存的值就会更新</p>
+<p>并发的三个特性：</p>
+<p>​    原子性：表示操作不可终端，要么一定执行完，要么不执行</p>
+<p>​    可见性：指的是一个线程修改数据，其他线程立刻能访问到</p>
+<p>​    有序性：即程序执行的顺序按照代码的先后顺序执行 </p>
+<p>volatile ：</p>
+<p>​    是当变量修饰成volatile的时候，当读变量的时候，总是读到他的最新的值，不管那个线程对变量进行了写操作，都会立刻更新到主存中，</p>
+<p>他保证了可见性和有序性，volatile限制了指令的重排序</p>
+<p>当读一个volatile变量时，会把线程对于本地的内存置为无效，线程接下来将从主存中读取共享变量</p>
+<p>但是他无法保证原子性，因为多个线程读去变量的时候，可能会被阻塞，</p>
+<p>假设A读取值为10，被阻塞，B读取然后+1，就会变成11，</p>
+<p>而因为A以及读到了数据，就不会去读最新的</p>
+<p>volatile 底层机制：</p>
+<p>​    在生成汇编代码的时候会在volatile关键字的代码之前会有一个lock指令</p>
+<p>它保证了，重排序的时候不能把后面指令重排序到这个位置之前</p>
+<p>​    会把cache写入内存</p>
+<p>​    写入动作会使别的内存无效cache，相当于让别的线程去读新写入的数值</p>
+<p>使用场景：</p>
+<p>​    状态标记变量，因为对于标记变量只有赋值和读取，没有数据增加减少操作，会比上锁有一定效率提升</p>
+<p>​    单例模式里面的双重检查锁定，可以用它来修饰，因为也是只涉及到了读取它的状态</p>
+<p>双重检查 -&gt;多线程</p>
+<p>如果你要共享的资源发生互斥的时候 并且是有判断什么时候结束</p>
+<p>可以在已有锁的外面再加上一个上述的判断</p>
+<p>这样当你已经满足这个判断的时候已经不用在进入锁住块的内部了</p>
+<p>这样其他的线程在锁外的判断即满足 而不是在锁住等待了  </p>
+<p>可以提高效率</p>
+<p>但是这样还是有瑕疵</p>
+<p>但是这个方法还是有问题的因为你创建变量 new 这个对象的时候 这个变量又可能还是null </p>
+<p>当有一个线程正好到new 这个对象的时候  你突然来一个线程调用这个方法</p>
+<p>这个时候上一个线程 new了这个对象 但是还没完全初始化构造函数的时候 </p>
+<p>第二个线程会判断有这个对象 返回 然后第一个线程回来 发现还没new 利索 </p>
+<p>继续new  这个时候 两个对象还是不一样地址</p>
 <p><a href="http://www.qnlywhd.top/">作者拥有版权，请注明出处转载！</a></p>
 <p>如果觉得有什么疑惑或者博主代码有什么问题，可以通过关于我，加我QQ联系 ，感谢。</p>
 
@@ -492,12 +515,12 @@
 
   <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/2018/11/30/HDU-4553-线段树区间合并/">HDU 4553 线段树区间合并</a></p>
+  <p><span>本文标题:</span><a href="/2018/11/30/volatile/">volatile</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 王浩东 的个人博客">王浩东</a></p>
   <p><span>发布时间:</span>2018年11月30日 - 21:11</p>
-  <p><span>最后更新:</span>2018年12月06日 - 18:12</p>
-  <p><span>原始链接:</span><a href="/2018/11/30/HDU-4553-线段树区间合并/" title="HDU 4553 线段树区间合并">http://www.qnlywhd.top/2018/11/30/HDU-4553-线段树区间合并/</a>
-    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.qnlywhd.top/2018/11/30/HDU-4553-线段树区间合并/" aria-label="复制成功！"></i></span>
+  <p><span>最后更新:</span>2019年03月16日 - 00:03</p>
+  <p><span>原始链接:</span><a href="/2018/11/30/volatile/" title="volatile">http://www.qnlywhd.top/2018/11/30/volatile/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.qnlywhd.top/2018/11/30/volatile/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p> 
   </div>
@@ -538,7 +561,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/线段树/" rel="tag"><i class="fa fa-tag"></i> -线段树</a>
+            <a href="/tags/并发/" rel="tag"><i class="fa fa-tag"></i> -并发</a>
           
         </div>
       
@@ -551,8 +574,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/30/volatile/" rel="next" title="volatile">
-                <i class="fa fa-chevron-left"></i> volatile
+              <a href="/2018/11/30/一道特别有想法的题/" rel="next" title="一道特别有想法的题">
+                <i class="fa fa-chevron-left"></i> 一道特别有想法的题
               </a>
             
           </div>
@@ -561,8 +584,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/12/04/哈尔滨理工大学软件与微电子学院院赛高年级组A/" rel="prev" title="哈尔滨理工大学软件与微电子学院院赛高年级组A">
-                哈尔滨理工大学软件与微电子学院院赛高年级组A <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/30/HDU-4553-线段树区间合并/" rel="prev" title="HDU 4553 线段树区间合并">
+                HDU 4553 线段树区间合并 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -648,17 +671,8 @@ var jiathis_config={
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -775,22 +789,6 @@ var jiathis_config={
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#题意："><span class="nav-number">1.</span> <span class="nav-text">题意：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#题解："><span class="nav-number">2.</span> <span class="nav-text">题解：</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#AC代码"><span class="nav-number"></span> <span class="nav-text">AC代码</span></a></li></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
