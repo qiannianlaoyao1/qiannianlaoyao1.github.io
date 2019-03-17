@@ -72,7 +72,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="-计算机网络,">
 
 
 
@@ -85,16 +85,17 @@
 
 
 
-<meta name="description" content="今番良晤，豪兴不浅！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="qiannianlaoyao&#39;s Blog">
-<meta property="og:url" content="http://www.qnlywhd.top/archives/2018/index.html">
+<meta name="keywords" content="-计算机网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tcp的三次握手和四次挥手和udp的区别">
+<meta property="og:url" content="http://www.qnlywhd.top/2019/03/17/tcp的三次握手和四次挥手和udp的区别/index.html">
 <meta property="og:site_name" content="qiannianlaoyao&#39;s Blog">
-<meta property="og:description" content="今番良晤，豪兴不浅！">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.qnlywhd.top/2019/03/17/tcp的三次握手和四次挥手和udp的区别/1.jpg">
+<meta property="og:updated_time" content="2019-03-17T14:31:53.304Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="qiannianlaoyao&#39;s Blog">
-<meta name="twitter:description" content="今番良晤，豪兴不浅！">
+<meta name="twitter:title" content="tcp的三次握手和四次挥手和udp的区别">
+<meta name="twitter:image" content="http://www.qnlywhd.top/2019/03/17/tcp的三次握手和四次挥手和udp的区别/1.jpg">
 
 
 
@@ -124,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://www.qnlywhd.top/archives/2018/">
+  <link rel="canonical" href="http://www.qnlywhd.top/2019/03/17/tcp的三次握手和四次挥手和udp的区别/">
 
 
 
 
 
-  <title>归档 | qiannianlaoyao's Blog</title>
+  <title>tcp的三次握手和四次挥手和udp的区别 | qiannianlaoyao's Blog</title>
   
 
 
@@ -149,7 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -295,391 +296,331 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.qnlywhd.top/2019/03/17/tcp的三次握手和四次挥手和udp的区别/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="王浩东">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="qiannianlaoyao's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">tcp的三次握手和四次挥手和udp的区别</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T22:22:19+08:00">
+                2019-03-17
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-17T22:31:53+08:00">
+                2019-03-17
+              </time>
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 14 篇日志。 继续努力。
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/tcp/" itemprop="url" rel="index">
+                    <span itemprop="name">tcp</span>
+                  </a>
+                </span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/09/HDU-3397-线段树区间合并-巧用lazy标记/" itemprop="url">
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_value_page_pv"></span>次阅读
+          
+
+          
+            <div class="post-wordcount">
               
-                <span itemprop="name">HDU 3397 线段树区间合并(巧用lazy标记)</span>
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  646
+                </span>
               
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-09T22:37:49+08:00" content="2018-12-09">
-          12-09
-        </time>
-      </div>
+              
+                <span class="post-meta-divider">|</span>
+              
 
-    </header>
-  </article>
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
 
+          
 
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/07/2018-ACM-ICPC-亚洲区域赛-北京站-A/" itemprop="url">
-              
-                <span itemprop="name">2018 ACM-ICPC 亚洲区域赛 北京站 A</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-07T22:25:08+08:00" content="2018-12-07">
-          12-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/07/Codeforces-Round-525-Div-2-C/" itemprop="url">
-              
-                <span itemprop="name">Codeforces Round #525 (Div. 2) C</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-07T21:33:45+08:00" content="2018-12-07">
-          12-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p><img src="/2019/03/17/tcp的三次握手和四次挥手和udp的区别/1.jpg" alt=""></p>
+<a id="more"></a>
+<h3 id="TCP-三次握手和四次挥手"><a href="#TCP-三次握手和四次挥手" class="headerlink" title="TCP 三次握手和四次挥手"></a>TCP 三次握手和四次挥手</h3><p>三次握手：</p>
+<p>​    客户端发送链接syn请求给服务端，服务端收到请求，返回客户端一个ack和syn以及序列号 表示可以链接</p>
+<p>客户端在发送ack和序列号给服务端</p>
+<p>为什么需要三次握手</p>
+<p>​    因为首先第一次握手，是客户端给服务端发送的请求，一定不能少，第二次是服务端返回给客户端的，也不能少表示服务端成功接受了客户端的请求，而最后一次客户端发送给服务端的ack代表你客户端已经收到了服务端发送的数据，这样的握手才是稳定的链接</p>
+<hr>
+<p>四次挥手：</p>
+<p>​    客户端发送fin请求断开链接给服务端，服务端收到请求发送ack给客户端，</p>
+<p>之后服务端在发送fin和ack给客户端，客户端收到之后在发送ack给服务端</p>
+<p>为什么需要四次挥手</p>
+<p>​    因为客户端在请求断开链接的时候，服务端发送给客户端的数据不一定都发送完，</p>
+<p>所以在客户端请求fin之后，服务端返回ack，然后等待数据都发送完之后，在发送fin和ack</p>
+<p>为什么四次挥手的时候最后要等待2msl客户端才关闭</p>
+<p>因为在给服务端发送最后的ack的时候，我们必须认为网络是不稳定的，如果服务端没有接受到ack</p>
+<p>就会一直发送fin请求给客户端，所以在客户端要有等待如果这个时候在收到fin，说明之前的没发送成功，在重新发送</p>
+<p>tcp和udp区别</p>
+<p>tcp是基于连接，udp是无连接的不安全的</p>
+<p>tcp对资源要求多，udp要求少</p>
+<p>tcp速度慢，udp速度快（较好的实时性）</p>
+<p>tcp需要建立三次握手 </p>
+<p>Tcp通过校验和，重传控制，序号标识，滑动窗口、确认应答实现可靠传输 </p>
+<p>tcp 是数据有序可靠的到达</p>
+<p>tcp是连接是点到点的</p>
+<p>但是udp 支持一对一，一对多，多对多</p>
+<p>udp是尽力而为的服务，数据到达是无序的可能丢包</p>
+<p>udp没有拥塞控制等机制</p>
+<p>tcp首部20字节开销小，udp8个字节开销小</p>
+<p><a href="http://www.qnlywhd.top/">作者拥有版权，请注明出处转载！</a></p>
+<p>如果觉得有什么疑惑或者博主代码有什么问题，可以通过关于我，加我QQ联系 ，感谢。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/06/HDU-4348-主席树区间更新在线/" itemprop="url">
-              
-                <span itemprop="name">HDU 4348 主席树区间更新在线</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-06T22:36:41+08:00" content="2018-12-06">
-          12-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/06/HDU-3911-线段树区间合并-延迟标记/" itemprop="url">
-              
-                <span itemprop="name">HDU 3911 线段树区间合并 延迟标记</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-06T18:16:08+08:00" content="2018-12-06">
-          12-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/04/Threadlocal/" itemprop="url">
-              
-                <span itemprop="name">ThreadLocal 在事务中的使用</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-04T16:53:14+08:00" content="2018-12-04">
-          12-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/04/java1/" itemprop="url">
-              
-                <span itemprop="name">java1</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-04T16:53:14+08:00" content="2018-12-04">
-          12-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/12/04/哈尔滨理工大学软件与微电子学院院赛高年级组A/" itemprop="url">
-              
-                <span itemprop="name">哈尔滨理工大学软件与微电子学院院赛高年级组A</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-12-04T16:42:25+08:00" content="2018-12-04">
-          12-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/30/HDU-4553-线段树区间合并/" itemprop="url">
-              
-                <span itemprop="name">HDU 4553 线段树区间合并</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-30T21:58:19+08:00" content="2018-11-30">
-          11-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/30/volatile/" itemprop="url">
-              
-                <span itemprop="name">volatile</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-30T21:58:19+08:00" content="2018-11-30">
-          11-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+   
+<div>
+  
+    <div> 
+     
+        <div style="text-align:center;color: #555;font-size:14px;">-------------The End-------------</div> 
+     
+</div>
+
+
+  
+</div>
+
+    <div>
+          
+            
+  <div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+  <!-- JS库 sweetalert 可修改路径 --> <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/03/17/tcp的三次握手和四次挥手和udp的区别/">tcp的三次握手和四次挥手和udp的区别</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 王浩东 的个人博客">王浩东</a></p>
+  <p><span>发布时间:</span>2019年03月17日 - 22:03</p>
+  <p><span>最后更新:</span>2019年03月17日 - 22:03</p>
+  <p><span>原始链接:</span><a href="/2019/03/17/tcp的三次握手和四次挥手和udp的区别/" title="tcp的三次握手和四次挥手和udp的区别">http://www.qnlywhd.top/2019/03/17/tcp的三次握手和四次挥手和udp的区别/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://www.qnlywhd.top/2019/03/17/tcp的三次握手和四次挥手和udp的区别/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p> 
+  </div>
+  <script>
+      var clipboard = new Clipboard('.fa-clipboard');
+      $(".fa-clipboard").click(function(){
+        clipboard.on('success', function(){
+            swal({
+            title: "",
+            text: '复制成功',
+            icon: "success",
+            showConfirmButton: true
+            });
+        });
+        });
+</script>
+
+
+
+          
+    </div>
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/2.png" alt="王浩东 wechat" style="width: 200px; max-width: 100%;">
+    <div>扫一扫添加微信好友</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/计算机网络/" rel="tag"><i class="fa fa-tag"></i> -计算机网络</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/09/HDU-3397-线段树区间合并-巧用lazy标记/" rel="next" title="HDU 3397 线段树区间合并(巧用lazy标记)">
+                <i class="fa fa-chevron-left"></i> HDU 3397 线段树区间合并(巧用lazy标记)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
 
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2018/page/2/">2</a><a class="extend next" rel="next" href="/archives/2018/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
+
+  </article>
 
 
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微博</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript">
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
+  </div>
 
 
           </div>
@@ -687,6 +628,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MTM2OS8xNzkxNg=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -707,8 +657,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -825,6 +784,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-三次握手和四次挥手"><span class="nav-number">1.</span> <span class="nav-text">TCP 三次握手和四次挥手</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -993,6 +968,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1021,6 +1000,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
